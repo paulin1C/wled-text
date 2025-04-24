@@ -27,16 +27,16 @@ minik_font = Font({
         Column("x x  x"),
         Column(" x xx "),
     ),
-    '4': Character(
-        Column("  xx  "),
-        Column(" x x  "),
-        Column("xxxxxx"),
-        Column("   x  "),
-    ),
-    '$': Character( # this, too, is 4, but different. haven't decided which one I like more yet
+    '4': Character( 
         Column("xxxx  "),
         Column("   x  "),
         Column("  xxxx"),
+        Column("   x  "),
+    ),
+    '$': Character( # this, too, is 4, but different
+        Column("  xx  "),
+        Column(" x x  "),
+        Column("xxxxxx"),
         Column("   x  "),
     ),
     '5': Character(
@@ -227,6 +227,11 @@ minik_font = Font({
         Column("xxxxxx"),
         Column("   x x"),
         Column("    x "),
+    ),
+
+    # special characters
+    ':': Character(
+        Column(" x  x "),
     ),
     zero_width_joiner: Character(Column("      "), Column("      ")),
     ' ': Character(Column("      "), Column("      ")),
