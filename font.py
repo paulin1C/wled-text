@@ -9,7 +9,7 @@ def transpose(lists):
     return result
 
 class Pixel:
-    truthy = "○•░XxO"
+    truthy = "•○░XxO"
     falsy = " _-"
     def __init__(self, value):
         if value in self.truthy:
