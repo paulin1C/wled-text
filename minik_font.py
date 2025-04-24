@@ -321,9 +321,10 @@ minik_font = Font({
         Column(" x   x"),
     ),
     'u': Character(
-        Column(" xxxxx"),
+        Column(" xxxx "),
         Column("     x"),
-        Column(" xxxxx"),
+        Column("     x"),
+        Column(" xxxx "),
     ),
     'v': Character(
         Column(" xxxx "),
