@@ -1,3 +1,5 @@
+from api import display_character
+
 zero_width_joiner = "‍"
 
 def transpose(lists):
@@ -16,6 +18,8 @@ class Pixel:
             self.value = False
         else:
             raise ValueError(f"Connot interpret pixel '{value}' as on or off.")
+    def __bool__(self):
+        return self.value
     def __repr__(self):
         return self.truthy[0] if self.value else self.falsy[0]
 
@@ -65,6 +69,9 @@ class Font:
         representation = self.convert(text)
         rows = transpose(representation)
         print(rows_to_str(rows))
+    def display(self, text):
+        representation = self.convert(text)
+        display_character(representation)
 
 def rows_to_str(rows):
     return "\n".join(["".join(map(str, pixel)) for pixel in rows])
