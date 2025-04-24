@@ -34,9 +34,3 @@ class Character:
             rows.append("".join([str(column.pixels[row]) for column in self.columns]))
         return "\n".join(rows)
             
-x = Column("x x x ")
-y = Column("x x x ")
-z = Column(" x x x")
-c = Character(x,y,z)
-print(x)
-print(c)
