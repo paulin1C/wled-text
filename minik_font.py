@@ -233,8 +233,13 @@ minik_font = Font({
     ':': Character(
         Column(" x  x "),
     ),
-    zero_width_joiner: Character(Column("      "), Column("      ")),
-    ' ': Character(Column("      "), Column("      ")),
+    zero_width_joiner: Character(
+        Column("      "),
+    ),
+    ' ': Character(
+        Column("      "), 
+        Column("      ")
+    ),
 })
 
 for name, character in minik_font.characters.items():
@@ -243,4 +248,4 @@ for name, character in minik_font.characters.items():
         print(character)
     print()
 
-minik_font.display("SAB4")
+minik_font.display("16:13")
